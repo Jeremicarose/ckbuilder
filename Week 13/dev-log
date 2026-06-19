@@ -1,0 +1,79 @@
+# Builder Track Weekly Report — Week 13
+
+**Name:** Jeremic  
+**Week Ending:** 12 – 19 June  
+
+---
+
+## Overview
+
+This week focused on advancing the CKB-powered MLAT system from a hybrid prototype toward a more production-ready architecture. The system now integrates on-chain receiver discovery with a fully operational MLAT pipeline, API layer, and dashboard interface.
+
+The main focus remains stabilizing ingestion and preparing for real-world receiver data integration.
+
+---
+
+## Key Accomplishments
+
+### System Integration
+- Local MLAT system fully operational:
+  - API service
+  - Processing engine
+  - Real-time dashboard
+- End-to-end pipeline confirmed:
+  - Receiver ingestion → MLAT processing → API → dashboard
+- Hybrid mode running with:
+  - CKB-discovered receivers
+  - Simulated aircraft traffic
+
+### CKB Receiver Integration
+- Receiver registry contract remains active on CKB testnet
+- On-chain receiver discovery and selection working
+- Hybrid receiver model maintained for stability and testing
+
+### Ingestion Bridge Progress
+- Bridge scaffolding in place for real receiver feeds
+- Supports future:
+  - Beast (readsb/dump1090)
+  - TCP streams
+  - Remote receiver endpoints
+- Initial normalization layer implemented
+
+### System Stability & Tooling
+- Improved runtime stability under continuous processing
+- API endpoints validated and responsive
+- Early benchmarking and observability metrics implemented
+
+---
+
+## Current Blocker
+
+Lack of real multi-receiver live input limits full validation of:
+
+- Accuracy
+- Completeness
+- Freshness
+- Reliability
+- Benchmarking vs OpenSky / FlightRadar24
+
+System is stable, but still operating in hybrid/simulated mode.
+
+---
+
+## What This Unlocks
+
+- Real CKB-coordinated receiver network
+- Benchmarkable MLAT aviation data product
+- Premium API and streaming services
+- Future incentive layer via Fiber-based models
+
+---
+
+## Next Steps
+
+- Integrate real receiver feeds (Beast/TCP/remote sources)
+- Validate MLAT performance under real conditions
+- Benchmark against external aviation datasets
+- Transition from hybrid → live network mode
+
+---
