@@ -1,79 +1,108 @@
 # Builder Track Weekly Report — Week 13
 
 **Name:** Jeremic  
-**Week Ending:** 12 – 19 June  
+**Week Ending:** 1 - 7 June
 
 ---
 
 ## Overview
 
-This week focused on advancing the CKB-powered MLAT system from a hybrid prototype toward a more production-ready architecture. The system now integrates on-chain receiver discovery with a fully operational MLAT pipeline, API layer, and dashboard interface.
-
-The main focus remains stabilizing ingestion and preparing for real-world receiver data integration.
+This week focused on shifting the project from a backend-heavy prototype into a more product-facing system. The main areas of progress were frontend/dashboard redesign, hosted demo structure, and stronger integration between the API, dashboard, and runtime outputs.
 
 ---
 
 ## Key Accomplishments
 
-### System Integration
-- Local MLAT system fully operational:
-  - API service
-  - Processing engine
-  - Real-time dashboard
-- End-to-end pipeline confirmed:
-  - Receiver ingestion → MLAT processing → API → dashboard
-- Hybrid mode running with:
-  - CKB-discovered receivers
-  - Simulated aircraft traffic
+### Dashboard and Product Surface Redesign
 
-### CKB Receiver Integration
-- Receiver registry contract remains active on CKB testnet
-- On-chain receiver discovery and selection working
-- Hybrid receiver model maintained for stability and testing
+* Reworked the frontend from a basic technical dashboard into a more product-oriented **MLAT Airspace Console**.
+* Added:
 
-### Ingestion Bridge Progress
-- Bridge scaffolding in place for real receiver feeds
-- Supports future:
-  - Beast (readsb/dump1090)
-  - TCP streams
-  - Remote receiver endpoints
-- Initial normalization layer implemented
+  * hosted landing page
+  * dashboard mode indicators
+  * map-first interaction flow
+  * aircraft and receiver context panels
+* Improved the product framing so the system is easier to understand for operators and reviewers.
 
-### System Stability & Tooling
-- Improved runtime stability under continuous processing
-- API endpoints validated and responsive
-- Early benchmarking and observability metrics implemented
+### API and Frontend Integration
 
----
+* Updated the API so the frontend can be served directly from the application.
+* Improved:
 
-## Current Blocker
+  * root page delivery
+  * dashboard routing
+  * frontend mode reporting
+  * polling-based behavior when WebSocket support is unavailable
 
-Lack of real multi-receiver live input limits full validation of:
+### Runtime and Output Clarity
 
-- Accuracy
-- Completeness
-- Freshness
-- Reliability
-- Benchmarking vs OpenSky / FlightRadar24
+* Continued refining the hybrid runtime so the dashboard can show:
 
-System is stable, but still operating in hybrid/simulated mode.
+  * aircraft positions
+  * receiver context
+  * uncertainty and quality-related output metadata
+* Improved the distinction between:
+
+  * simulation/demo behavior
+  * live CKB registry behavior
+
+### Product Context
+
+* Added clearer product documentation and a stronger internal framing of the system as:
+
+  * receiver discovery + MLAT runtime + product delivery platform
 
 ---
 
-## What This Unlocks
+## Key Learnings
 
-- Real CKB-coordinated receiver network
-- Benchmarkable MLAT aviation data product
-- Premium API and streaming services
-- Future incentive layer via Fiber-based models
+### Product Framing Matters
+
+Learned that even when the backend and contracts are technically strong, the system is much harder for others to evaluate unless:
+
+* the dashboard tells a clear story
+* the product mode is obvious
+* the UI explains aircraft and receiver roles naturally
+
+### Hosted Demo Is Different From Live Proof
+
+This week reinforced that:
+
+* a hosted demo is valuable for product communication
+* but it is not the same as proving live data quality or operational readiness
+
+### Infrastructure vs Product Surface
+
+The project became clearer once the stack was described in layers:
+
+* CKB for registry and receiver identity
+* off-chain runtime for correlation and solving
+* API/dashboard for customer-facing output
+
+---
+
+## Current Project Status
+
+The project now includes:
+
+* map-first dashboard surface
+* hosted landing page
+* stronger API/frontend integration
+* clearer simulation/live mode handling
+* continued CKB registry support
+* local hybrid runtime producing usable demo outputs
 
 ---
 
 ## Next Steps
 
-- Integrate real receiver feeds (Beast/TCP/remote sources)
-- Validate MLAT performance under real conditions
-- Benchmark against external aviation datasets
-- Transition from hybrid → live network mode
+* improve the frontend further so it feels closer to a polished aviation product
+* strengthen readiness around:
+
+  * quality
+  * freshness
+  * reliability
+* continue moving from local demo capability toward real benchmarkable output
+* begin preparing explicit benchmark and operational readiness workflows
 
 ---
